@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FE baigiamasis</title>
+    <script
+      src="https://kit.fontawesome.com/a09df14453.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <section class="section section--static">
+      <div class="logo">Google</div>
+      <div class="content">
+        <h2>An Amazing Website</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis saepe
+          officia sed sunt tempora provident? Expedita obcaecati sequi
+          reprehenderit laudantium quia facilis harum est eveniet!
+        </p>
+      </div>
+      <div class="footer">
+        <p>&copy; <span class="year">0000</span> Data Test</p>
+      </div>
+    </section>
+
+    <section class="section section--first">
+      <div class="question-container question-container--first">
+        <div class="num">1/5</div>
+        <h3>What do you usually do after work?</h3>
+        <div class="activities"></div>
+      </div>
+      <input
+        class="btn btn-primary"
+        id="btn-section-first"
+        type="submit"
+        value="Next"
+      />
+    </section>
+
+    <section class="section section--second hidden">
+      <div class="question-container question-container--second">
+        <div class="num">2/5</div>
+        <h3>Please fill in your details</h3>
+        <form name="postPerson">
+          <input
+            type="text"
+            name="first_name"
+            placeholder="First Name"
+            required
+          />
+          <input
+            type="text"
+            name="last_name"
+            placeholder="Last Name"
+            required
+          />
+          <input type="text" name="email" placeholder="Your Email" required />
+          <select name="countries" id="countries" required></select
+          ><br />
+          <input type="checkbox" id="acceptTerms" name="acceptTerms" required />
+          <label for="acceptTerms"
+            >Please accept our <a href="#">Terms and conditions</a></label
+          >
+          <input
+            class="btn btn-primary"
+            id="btn-section-second"
+            type="submit"
+            value="Next"
+          />
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--third hidden">
+      <div class="question-container question-container--third">
+        <div class="num">3/5</div>
+        <h3>Are these details correct?</h3>
+        <p>Please make sure these details are corrext</p>
+        <div class="person-details">
+          <div id="person-name">
+            <p>Name</p>
+          </div>
+          <div id="person-surname">
+            <p>Surname</p>
+          </div>
+          <div id="person-email">
+            <p>Email</p>
+          </div>
+          <div id="person-country">
+            <p>Country</p>
+          </div>
+        </div>
+      </div>
+      <input
+        class="btn btn-secondary"
+        id="btn-delete-person"
+        type="submit"
+        value="Oops, no"
+      />
+      <input
+        class="btn btn-primary"
+        id="btn-section-third"
+        type="submit"
+        value="I confirm details are accurate"
+      />
+    </section>
+
+    <section class="section section--fourth hidden">
+      <div class="question-container question-container--third">
+        <div class="num">4/5</div>
+        <h3>Please check your email</h3>
+        <p>We sent you an email with all of the required information to complete the registration</p>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>

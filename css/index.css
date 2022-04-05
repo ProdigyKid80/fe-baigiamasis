@@ -1,0 +1,62 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.section {
+  padding: 1rem 2rem;
+  width: 50%;
+}
+
+.section--static {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#424add), to(#232471));
+  background-image: linear-gradient(to bottom, #424add, #232471);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section--static .logo {
+  font-size: 1.2rem;
+}
+
+.section--static .content {
+  text-align: center;
+}
+
+.section--static .content h2 {
+  font-weight: 400;
+}
+
+.section--static .content p {
+  color: #c7c7c7;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.section--static .footer {
+  color: #929292;
+  font-size: 0.8rem;
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,56 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+$primary: #424add;
+$secondary: #232471;
+$light-gray: #c7c7c7;
+$medium-gray: #929292;
+$dark-gray: #696969;
+
+body {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.section {
+  padding: 1rem 2rem;
+  width: 50%;
+}
+
+.section--static {
+  background-image: linear-gradient(to bottom, $primary, $secondary);
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    text-align: center;
+
+    h2 {
+      font-weight: 400;
+    }
+
+    p {
+      color: $light-gray;
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+  }
+
+  .footer {
+    color: $medium-gray;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
