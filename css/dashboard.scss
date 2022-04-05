@@ -4,9 +4,13 @@
 
 $primary: #424add;
 $secondary: #db2b2b;
+$light-gray: #c7c7c7;
+
+body {
+  background-color: $light-gray;
+}
 
 .section {
-  background-color: aqua;
   box-sizing: border-box;
   padding: 1rem 2rem;
 }
@@ -40,4 +44,39 @@ $secondary: #db2b2b;
   justify-content: center;
   margin-right: 1rem;
   width: 3.5rem;
+
+  &--red {
+    color: $secondary;
+  }
+}
+
+.section--signups {
+  background-color: #fff;
+  margin: 2rem;
+  border-radius: 0.5rem;
+
+  .search-block {
+    display: flex;
+
+    input[type="text"] {
+      width: 75%;
+    }
+
+    select {
+      width: 25%;
+    }
+  }
+
+  .person {
+    display: flex;
+    align-items: center;
+
+    &-info {
+      width: calc(75% - 3.5rem);
+    }
+
+    .country {
+      width: 25%;
+    }
+  }
 }

@@ -28,7 +28,7 @@
           <i class="fas fa-eye"></i>
         </div>
         <div class="info">
-          <h3>6500</h3>
+          <h3 id="visitorNum">Loading...</h3>
           <p>Visitors</p>
         </div>
       </div>
@@ -37,8 +37,8 @@
           <i class="fas fa-check-circle"></i>
         </div>
         <div class="info">
-          <h3>6500</h3>
-          <p>Visitors</p>
+          <h3 id="signupsNum">Loading...</h3>
+          <p>Signups</p>
         </div>
       </div>
       <div class="stat-block">
@@ -46,21 +46,31 @@
           <i class="fas fa-map-marker-alt"></i>
         </div>
         <div class="info">
-          <h3>6500</h3>
-          <p>Visitors</p>
+          <h3 id="countriesNum">Loading...</h3>
+          <p>Signup Countries</p>
         </div>
       </div>
       <div class="stat-block">
-        <div class="icon">
+        <div class="icon icon--red">
           <i class="fas fa-archive"></i>
         </div>
         <div class="info">
-          <h3>6500</h3>
-          <p>Visitors</p>
+          <h3 id="notCapitalized">Loading...</h3>
+          <p>Names that are not capitalized</p>
         </div>
       </div>
     </section>
-    <section class="section section--signups"></section>
+    <section class="section section--signups">
+      <h4>Signups</h4>
+      <div class="search-block">
+        <input type="text" placeholder="Search (back-end)..." />
+        <select name="countries" id="countries" required></select
+        ><br />
+      </div>
+      <div class="signups">
+        <div class="person">Loading...</div>
+      </div>
+    </section>
 
     <script src="dashboard.js"></script>
   </body>

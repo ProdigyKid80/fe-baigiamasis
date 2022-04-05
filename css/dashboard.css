@@ -2,8 +2,11 @@
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  background-color: #c7c7c7;
+}
+
 .section {
-  background-color: aqua;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1rem 2rem;
@@ -54,5 +57,46 @@
           justify-content: center;
   margin-right: 1rem;
   width: 3.5rem;
+}
+
+.icon--red {
+  color: #db2b2b;
+}
+
+.section--signups {
+  background-color: #fff;
+  margin: 2rem;
+  border-radius: 0.5rem;
+}
+
+.section--signups .search-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section--signups .search-block input[type="text"] {
+  width: 75%;
+}
+
+.section--signups .search-block select {
+  width: 25%;
+}
+
+.section--signups .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section--signups .person-info {
+  width: calc(75% - 3.5rem);
+}
+
+.section--signups .person .country {
+  width: 25%;
 }
 /*# sourceMappingURL=dashboard.css.map */
