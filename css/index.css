@@ -9,6 +9,8 @@ body {
 }
 
 .section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,6 +200,7 @@ body {
   float: right;
   font-size: 0.8rem;
   font-weight: 600;
+  margin-bottom: 0.5rem;
   padding: 0.5rem 1.5rem;
 }
 
@@ -225,5 +228,24 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section {
+    width: 100%;
+  }
+  .section--static {
+    height: 40vh;
+  }
+  .section .question-container {
+    margin: 2rem 0;
+    width: auto;
+  }
 }
 /*# sourceMappingURL=index.css.map */

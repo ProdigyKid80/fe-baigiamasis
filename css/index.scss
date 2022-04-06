@@ -14,6 +14,7 @@ body {
 }
 
 .section {
+  box-sizing: border-box;
   display: flex;
   padding: 1rem 2rem;
   width: 50%;
@@ -183,6 +184,7 @@ body {
   float: right;
   font-size: 0.8rem;
   font-weight: 600;
+  margin-bottom: 0.5rem;
   padding: 0.5rem 1.5rem;
 
   &-primary {
@@ -210,4 +212,23 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .section {
+    width: 100%;
+
+    &--static {
+      height: 40vh;
+    }
+
+    .question-container {
+      margin: 2rem 0;
+      width: auto;
+    }
+  }
 }

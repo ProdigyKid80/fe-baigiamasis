@@ -113,3 +113,42 @@ body {
     }
   }
 }
+
+@media (max-width: 768px) {
+  .section--statistics {
+    flex-direction: column;
+    gap: 1rem;
+
+    .stat-block:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  .section--signups {
+    .search-block {
+      flex-direction: column;
+      gap: 1rem;
+
+      input[type="text"],
+      select {
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .section--signups {
+    .person {
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+
+      &-info,
+      .country {
+        width: 100%;
+      }
+    }
+  }
+}
