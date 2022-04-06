@@ -25,6 +25,8 @@ const displayStats = async () => {
     `${baseUrl}/api/people?populate=*&pagination[pageSize]=500`
   );
 
+  console.log(masterData);
+
   // display total signups num in stats
   document.getElementById("signupsNum").textContent = masterData.length;
 
