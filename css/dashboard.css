@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #c7c7c7;
+  background-color: #eff1f5;
 }
 
 .section {
@@ -39,6 +39,18 @@ body {
   margin-right: 1rem;
 }
 
+.section--statistics .stat-block h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.section--statistics .stat-block p {
+  color: #a1a1a1;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
 .icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -56,7 +68,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-right: 1rem;
-  width: 3.5rem;
+  min-width: 3.5rem;
 }
 
 .icon--red {
@@ -65,14 +77,52 @@ body {
 
 .section--signups {
   background-color: #fff;
-  margin: 2rem;
+  margin: 0.3rem 2rem;
   border-radius: 0.5rem;
+}
+
+.section--signups h4 {
+  margin-top: 0.3rem;
 }
 
 .section--signups .search-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.section--signups .search-block input[type="text"],
+.section--signups .search-block select {
+  border: 1px solid #eff1f5;
+  border-radius: 5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+          box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  padding: 0.6rem 1rem;
+}
+
+.section--signups .search-block input[type="text"]::-webkit-input-placeholder,
+.section--signups .search-block select::-webkit-input-placeholder {
+  color: #a1a1a1;
+}
+
+.section--signups .search-block input[type="text"]:-ms-input-placeholder,
+.section--signups .search-block select:-ms-input-placeholder {
+  color: #a1a1a1;
+}
+
+.section--signups .search-block input[type="text"]::-ms-input-placeholder,
+.section--signups .search-block select::-ms-input-placeholder {
+  color: #a1a1a1;
+}
+
+.section--signups .search-block input[type="text"]::placeholder,
+.section--signups .search-block select::placeholder {
+  color: #a1a1a1;
+}
+
+.section--signups .search-block input[type="text"]:focus-visible,
+.section--signups .search-block select:focus-visible {
+  outline: none;
 }
 
 .section--signups .search-block input[type="text"] {

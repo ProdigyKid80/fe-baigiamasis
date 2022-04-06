@@ -4,7 +4,9 @@
 
 $primary: #424add;
 $secondary: #db2b2b;
-$light-gray: #c7c7c7;
+$light-gray: #eff1f5;
+$medium-gray: #a1a1a1;
+$dark-gray: #696969;
 
 body {
   background-color: $light-gray;
@@ -30,6 +32,17 @@ body {
     &:not(:last-child) {
       margin-right: 1rem;
     }
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.25rem;
+      margin-top: 0.25rem;
+    }
+    p {
+      color: $medium-gray;
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
   }
 }
 
@@ -43,7 +56,7 @@ body {
   height: 3.5rem;
   justify-content: center;
   margin-right: 1rem;
-  width: 3.5rem;
+  min-width: 3.5rem;
 
   &--red {
     color: $secondary;
@@ -52,11 +65,31 @@ body {
 
 .section--signups {
   background-color: #fff;
-  margin: 2rem;
+  margin: 0.3rem 2rem;
   border-radius: 0.5rem;
+
+  h4 {
+    margin-top: 0.3rem;
+  }
 
   .search-block {
     display: flex;
+
+    input[type="text"],
+    select {
+      border: 1px solid $light-gray;
+      border-radius: 5rem;
+      box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+      padding: 0.6rem 1rem;
+
+      &::placeholder {
+        color: $medium-gray;
+      }
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
 
     input[type="text"] {
       width: 75%;
