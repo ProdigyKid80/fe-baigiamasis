@@ -22,7 +22,7 @@ document.getElementById("visitorNum").textContent = Math.floor(
 
 const displayStats = async () => {
   const masterData = await getData(
-    `${baseUrl}/api/people?populate=*&pagination[pageSize]=500`
+    `${baseUrl}/api/people?populate=*&pagination[pageSize]=100`
   );
 
   console.log(masterData);
@@ -54,23 +54,23 @@ displayStats();
 
 const displaySignups = async (query, filter) => {
   let masterData = await getData(
-    `${baseUrl}/api/people?populate=*&pagination[pageSize]=500`
+    `${baseUrl}/api/people?populate=*&pagination[pageSize]=100`
   );
 
   if (filter) {
     masterData = await getData(
-      `${baseUrl}/api/people?populate=*&pagination[pageSize]=500&filters[country][country][$containsi]=${filter}`
+      `${baseUrl}/api/people?populate=*&pagination[pageSize]=100&filters[country][country][$containsi]=${filter}`
     );
   }
 
   if (query) {
     if (filter) {
       masterData = await getData(
-        `${baseUrl}/api/people?populate=*&pagination[pageSize]=500&filters[$or][0][first_name][$containsi]=${query}&filters[$or][1][last_name][$containsi]=${query}&filters[$or][2][email][$containsi]=${query}&filters[country][country][$containsi]=${filter}`
+        `${baseUrl}/api/people?populate=*&pagination[pageSize]=100&filters[$or][0][first_name][$containsi]=${query}&filters[$or][1][last_name][$containsi]=${query}&filters[$or][2][email][$containsi]=${query}&filters[country][country][$containsi]=${filter}`
       );
     } else {
       masterData = await getData(
-        `${baseUrl}/api/people?populate=*&pagination[pageSize]=500&filters[$or][0][first_name][$containsi]=${query}&filters[$or][1][last_name][$containsi]=${query}&filters[$or][2][email][$containsi]=${query}`
+        `${baseUrl}/api/people?populate=*&pagination[pageSize]=100&filters[$or][0][first_name][$containsi]=${query}&filters[$or][1][last_name][$containsi]=${query}&filters[$or][2][email][$containsi]=${query}`
       );
     }
   }
