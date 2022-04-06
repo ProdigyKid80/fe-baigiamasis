@@ -146,6 +146,16 @@ body {
   width: calc(75% - 3.5rem);
 }
 
+.section--signups .person-info h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.section--signups .person-info p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
 .section--signups .person .country {
   width: 25%;
 }

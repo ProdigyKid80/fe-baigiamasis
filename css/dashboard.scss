@@ -106,6 +106,16 @@ body {
 
     &-info {
       width: calc(75% - 3.5rem);
+
+      h5 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+      }
     }
 
     .country {
