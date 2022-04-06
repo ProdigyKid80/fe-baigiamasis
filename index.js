@@ -146,25 +146,37 @@ const displayPersonInfo = async () => {
   );
 
   const personNameEl = document.getElementById("person-name");
+  personNameEl.innerHTML = "";
+  const personNameLabel = document.createElement("p");
   const personName = document.createElement("p");
+  personNameLabel.textContent = "Name";
   personName.textContent = data[0].attributes.first_name;
-  personNameEl.append(personName);
+  personNameEl.append(personNameLabel, personName);
 
   const personSurnameEl = document.getElementById("person-surname");
+  personSurnameEl.innerHTML = "";
+  const personSurnameLabel = document.createElement("p");
   const personSurname = document.createElement("p");
+  personSurnameLabel.textContent = "Surname";
   personSurname.textContent = data[0].attributes.last_name;
-  personSurnameEl.append(personSurname);
+  personSurnameEl.append(personSurnameLabel, personSurname);
 
   const personEmailEl = document.getElementById("person-email");
+  personEmailEl.innerHTML = "";
+  const personEmailLabel = document.createElement("p");
   const personEmail = document.createElement("p");
+  personEmailLabel.textContent = "Email";
   personEmail.textContent = data[0].attributes.email;
-  personEmailEl.append(personEmail);
+  personEmailEl.append(personEmailLabel, personEmail);
 
   const personCountryEl = document.getElementById("person-country");
+  personCountryEl.innerHTML = "";
+  const personCountryLabel = document.createElement("p");
   const personCountry = document.createElement("p");
+  personCountryLabel.textContent = "Country";
   personCountry.textContent =
     data[0].attributes.country.data.attributes.country;
-  personCountryEl.append(personCountry);
+  personCountryEl.append(personCountryLabel, personCountry);
 };
 
 // delete person

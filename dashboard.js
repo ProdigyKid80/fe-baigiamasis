@@ -21,7 +21,9 @@ document.getElementById("visitorNum").textContent = Math.floor(
 );
 
 const displayStats = async () => {
-  const masterData = await getData(`${baseUrl}/api/people?populate=*`);
+  const masterData = await getData(
+    `${baseUrl}/api/people?populate=*&pagination[pageSize]=500`
+  );
 
   // display total signups num in stats
   document.getElementById("signupsNum").textContent = masterData.length;
@@ -49,22 +51,24 @@ const displayStats = async () => {
 displayStats();
 
 const displaySignups = async (query, filter) => {
-  let masterData = await getData(`${baseUrl}/api/people?populate=*`);
+  let masterData = await getData(
+    `${baseUrl}/api/people?populate=*&pagination[pageSize]=500`
+  );
 
   if (filter) {
     masterData = await getData(
-      `${baseUrl}/api/people?populate=*&filters[country][country][$containsi]=${filter}`
+      `${baseUrl}/api/people?populate=*&pagination[pageSize]=500&filters[country][country][$containsi]=${filter}`
     );
   }
 
   if (query) {
     if (filter) {
       masterData = await getData(
-        `${baseUrl}/api/people?populate=*&filters[$or][0][first_name][$containsi]=${query}&filters[$or][1][last_name][$containsi]=${query}&filters[$or][2][email][$containsi]=${query}&filters[country][country][$containsi]=${filter}`
+        `${baseUrl}/api/people?populate=*&pagination[pageSize]=500&filters[$or][0][first_name][$containsi]=${query}&filters[$or][1][last_name][$containsi]=${query}&filters[$or][2][email][$containsi]=${query}&filters[country][country][$containsi]=${filter}`
       );
     } else {
       masterData = await getData(
-        `${baseUrl}/api/people?populate=*&filters[$or][0][first_name][$containsi]=${query}&filters[$or][1][last_name][$containsi]=${query}&filters[$or][2][email][$containsi]=${query}`
+        `${baseUrl}/api/people?populate=*&pagination[pageSize]=500&filters[$or][0][first_name][$containsi]=${query}&filters[$or][1][last_name][$containsi]=${query}&filters[$or][2][email][$containsi]=${query}`
       );
     }
   }
@@ -115,7 +119,6 @@ const displayCountries = async () => {
   data.forEach((country) => {
     const option = document.createElement("option");
     option.value = country.attributes.country.toLowerCase();
-    // option.id = `country-${country.id}`;
     option.textContent = country.attributes.country;
 
     filterCountryEl.append(option);
@@ -136,7 +139,7 @@ searchField.addEventListener("keyup", (e) => {
   }
 });
 
-// ------------------ SEARCH INPUT ------------------------
+// ------------------ FILTER BY COUNTRY ------------------------
 filterCountryEl.addEventListener("change", (e) => {
   if (!e.target.classList.contains("selected"))
     e.target.classList.add("selected");
