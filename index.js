@@ -14,7 +14,7 @@ const getData = async (url) => {
   }
 };
 
-//--------------------- COPYRIGHT ----------------------
+//--------------------- DYNAMIC COPYRIGHT ----------------------
 const date = new Date();
 document.querySelector(".year").textContent = date.getFullYear();
 
@@ -37,7 +37,9 @@ const displayActivities = async () => {
     label.htmlFor = activity.attributes.title.split(" ")[0].toLowerCase();
     label.textContent = activity.attributes.title;
 
-    activitiesDiv.append(checkbox, label);
+    const br = document.createElement("br");
+
+    activitiesDiv.append(checkbox, label, br);
   });
 };
 displayActivities();

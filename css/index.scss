@@ -5,27 +5,28 @@
 $primary: #424add;
 $secondary: #232471;
 $light-gray: #c7c7c7;
-$medium-gray: #929292;
-$dark-gray: #696969;
+$medium-gray: #a1a1a1;
+$dark-gray: #8a8a8a;
+$green: #65cc33;
 
 body {
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .section {
+  display: flex;
   padding: 1rem 2rem;
   width: 50%;
+
+  &:not(:first-child) {
+    justify-content: space-around;
+  }
 }
 
 .section--static {
   background-image: linear-gradient(to bottom, $primary, $secondary);
   box-sizing: border-box;
   color: #fff;
-  display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
@@ -49,8 +50,164 @@ body {
   }
 
   .footer {
-    color: $medium-gray;
+    color: $dark-gray;
     font-size: 0.8rem;
     text-align: center;
   }
+}
+
+.question-container {
+  align-self: center;
+  width: calc(50% + 4rem);
+
+  .num {
+    color: $medium-gray;
+    font-size: 0.9rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+  }
+
+  .activities {
+    border-bottom: 0.06rem solid $light-gray;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+
+    input[type="checkbox"] {
+      border-radius: 0.2rem;
+      border: 0.06rem solid $light-gray;
+      height: 1.5rem;
+      margin-bottom: 0.6rem;
+      margin-right: 0.8rem;
+      width: 1.5rem;
+    }
+
+    label {
+      font-size: 0.9rem;
+      vertical-align: super;
+    }
+  }
+
+  form {
+    input[type="text"],
+    select {
+      border: 0.06rem solid $light-gray;
+      border-radius: 0.25rem;
+      box-sizing: border-box;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      width: 100%;
+      height: 2.5rem;
+
+      &:focus-visible {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $medium-gray;
+      }
+    }
+
+    label {
+      font-size: 0.9rem;
+      vertical-align: top;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: $dark-gray;
+  }
+
+  .person-details {
+    margin: 1.5rem 0;
+
+    div {
+      display: flex;
+
+      p {
+        margin: 0.2rem 0;
+
+        &:first-child {
+          width: 30%;
+        }
+      }
+    }
+  }
+
+  &--second,
+  &--third,
+  &--fourth {
+    .num {
+      border-top: 0.15rem solid $green;
+      padding-top: 0.8rem;
+    }
+  }
+
+  &--second {
+    .num {
+      width: 25%;
+    }
+  }
+
+  &--third {
+    .num {
+      width: 50%;
+    }
+  }
+
+  &--fourth {
+    .num {
+      width: 75%;
+    }
+  }
+}
+
+.br {
+  width: 100%;
+  border-bottom: 0.06rem solid $light-gray;
+  margin: 1rem 0;
+}
+
+.btn {
+  border-radius: 0.25rem;
+  cursor: pointer;
+  float: right;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+
+  &-primary {
+    background-color: $primary;
+    border: 0.06rem solid $primary;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $primary;
+    }
+  }
+
+  &-secondary {
+    background-color: $light-gray;
+    border: 0.06rem solid $light-gray;
+    color: $dark-gray;
+    margin-right: 0.5rem;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
+
+.hidden {
+  display: none;
 }

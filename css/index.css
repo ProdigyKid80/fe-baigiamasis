@@ -8,13 +8,17 @@ body {
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 1rem 2rem;
   width: 50%;
+}
+
+.section:not(:first-child) {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .section--static {
@@ -23,9 +27,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -55,8 +56,174 @@ body {
 }
 
 .section--static .footer {
-  color: #929292;
+  color: #8a8a8a;
   font-size: 0.8rem;
   text-align: center;
+}
+
+.question-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: calc(50% + 4rem);
+}
+
+.question-container .num {
+  color: #a1a1a1;
+  font-size: 0.9rem;
+}
+
+.question-container h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.question-container .activities {
+  border-bottom: 0.06rem solid #c7c7c7;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.question-container .activities input[type="checkbox"] {
+  border-radius: 0.2rem;
+  border: 0.06rem solid #c7c7c7;
+  height: 1.5rem;
+  margin-bottom: 0.6rem;
+  margin-right: 0.8rem;
+  width: 1.5rem;
+}
+
+.question-container .activities label {
+  font-size: 0.9rem;
+  vertical-align: super;
+}
+
+.question-container form input[type="text"],
+.question-container form select {
+  border: 0.06rem solid #c7c7c7;
+  border-radius: 0.25rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.question-container form input[type="text"]:focus-visible,
+.question-container form select:focus-visible {
+  outline: none;
+}
+
+.question-container form input[type="text"]::-webkit-input-placeholder,
+.question-container form select::-webkit-input-placeholder {
+  color: #a1a1a1;
+}
+
+.question-container form input[type="text"]:-ms-input-placeholder,
+.question-container form select:-ms-input-placeholder {
+  color: #a1a1a1;
+}
+
+.question-container form input[type="text"]::-ms-input-placeholder,
+.question-container form select::-ms-input-placeholder {
+  color: #a1a1a1;
+}
+
+.question-container form input[type="text"]::placeholder,
+.question-container form select::placeholder {
+  color: #a1a1a1;
+}
+
+.question-container form label {
+  font-size: 0.9rem;
+  vertical-align: top;
+}
+
+.question-container form label a {
+  text-decoration: none;
+}
+
+.question-container p {
+  font-size: 0.8rem;
+  color: #8a8a8a;
+}
+
+.question-container .person-details {
+  margin: 1.5rem 0;
+}
+
+.question-container .person-details div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.question-container .person-details div p {
+  margin: 0.2rem 0;
+}
+
+.question-container .person-details div p:first-child {
+  width: 30%;
+}
+
+.question-container--second .num, .question-container--third .num, .question-container--fourth .num {
+  border-top: 0.15rem solid #65cc33;
+  padding-top: 0.8rem;
+}
+
+.question-container--second .num {
+  width: 25%;
+}
+
+.question-container--third .num {
+  width: 50%;
+}
+
+.question-container--fourth .num {
+  width: 75%;
+}
+
+.br {
+  width: 100%;
+  border-bottom: 0.06rem solid #c7c7c7;
+  margin: 1rem 0;
+}
+
+.btn {
+  border-radius: 0.25rem;
+  cursor: pointer;
+  float: right;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-primary {
+  background-color: #424add;
+  border: 0.06rem solid #424add;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #424add;
+}
+
+.btn-secondary {
+  background-color: #c7c7c7;
+  border: 0.06rem solid #c7c7c7;
+  color: #8a8a8a;
+  margin-right: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=index.css.map */

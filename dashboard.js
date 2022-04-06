@@ -76,28 +76,23 @@ const displaySignups = async (query, filter) => {
   masterData.forEach((person) => {
     const personEl = document.createElement("div");
     personEl.classList.add("person");
-    signupsDiv.append(personEl);
 
     const iconEl = document.createElement("div");
     iconEl.classList.add("icon");
     iconEl.textContent = `${person.attributes.first_name
       .charAt(0)
       .toUpperCase()}${person.attributes.last_name.charAt(0).toUpperCase()}`;
-    personEl.append(iconEl);
 
     const personInfoEl = document.createElement("div");
     personInfoEl.classList.add("person-info");
-    personEl.append(personInfoEl);
 
     const nameEl = document.createElement("h5");
     nameEl.textContent = `${person.attributes.first_name} ${person.attributes.last_name}`;
-    personInfoEl.append(nameEl);
 
     const emailEl = document.createElement("p");
     emailEl.textContent = `${
       person.attributes.email || "Person doesn't have an email"
     }`;
-    personInfoEl.append(emailEl);
 
     const countryEl = document.createElement("div");
     countryEl.classList.add("country");
@@ -105,7 +100,10 @@ const displaySignups = async (query, filter) => {
       person.attributes.country?.data?.attributes.country ||
       "No country to show"
     }`;
-    personEl.append(countryEl);
+
+    signupsDiv.append(personEl);
+    personInfoEl.append(nameEl, emailEl);
+    personEl.append(iconEl, personInfoEl, countryEl);
   });
 };
 displaySignups();
