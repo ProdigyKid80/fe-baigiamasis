@@ -29,7 +29,6 @@ const displayActivities = async () => {
   data.forEach((activity) => {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    // checkbox.id = activity.attributes.title.split(" ")[0].toLowerCase();
     checkbox.id = activity.id;
     checkbox.name = activity.attributes.title.split(" ")[0].toLowerCase();
 
@@ -181,7 +180,6 @@ const displayPersonInfo = async () => {
 
 // delete person
 const deletePerson = async (personId) => {
-  console.log(personId);
   try {
     const res = await fetch(`${baseUrl}/api/people/${personId}`, {
       method: "DELETE",
